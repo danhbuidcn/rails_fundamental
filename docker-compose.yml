@@ -1,0 +1,35 @@
+version: "3"
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+    ports:
+      - "${DB_PORT}:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    platform: linux/x86_64
+
+  web:
+    build: .
+    environment:
+      - RAILS_ENV=${RAILS_ENV}
+      - TZ=Asia/Tokyo
+    env_file: .env
+    volumes: 
+      - .:/myapp # synchronize changes between host and container
+      - bundle:/usr/local/bundle # stores gems installed via bundler
+      - node_modules:/myapp/node_modules # includes installed npm packages
+    ports:
+      - "${RAILS_PORT}:3000"
+    depends_on:
+      - db
+    stdin_open: true # interact with processes inside the container to debug
+    tty: true # allows you to enter commands in container
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0' -e ${RAILS_ENV}"
+
+volumes:
+  postgres_data:
+  bundle:
+  node_modules:
