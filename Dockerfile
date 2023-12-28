@@ -1,6 +1,10 @@
 FROM ruby:3.1.4
 RUN apt-get update
+
+# Install Node.js
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get install -y nodejs npm
+
 RUN apt-get install -y libssl-dev libreadline-dev zlib1g-dev \
     autoconf bison build-essential libyaml-dev \
     libncurses5-dev libffi-dev libgdbm-dev \

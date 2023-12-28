@@ -22,3 +22,11 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# Note
+- Ruby version: 3.1.4
+- Rails version: 7.0.8
+- Run
+```
+rails credentials:edit
+```
