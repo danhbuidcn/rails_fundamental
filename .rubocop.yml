@@ -6,16 +6,14 @@ AllCops:
     - config/**/*
     - db/migrate/**/*
     - db/schema.rb
-    - db/seeds*
     - Gemfile.lock
     - mysql_data/*
     - node_modules/*
     - tmp/*
 
 Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
   Exclude:
-    - app/helpers/application_helper.rb
-    - app/mailers/application_mailer.rb
-    - app/models/application_record.rb
-    - test/application_system_test_case.rb
-    - test/test_helper.rb
+    - spec/**/*
