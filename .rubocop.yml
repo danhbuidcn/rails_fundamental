@@ -10,6 +10,7 @@ AllCops:
     - mysql_data/*
     - node_modules/*
     - tmp/*
+    - tmp/**/*
 
 Style/Documentation:
   Enabled: false
