@@ -2,5 +2,5 @@
 
 require 'rails_helper'
 
-RSpec.describe 'microposts/edit', type: :view do
+RSpec.describe 'StaticPages', type: :request do
 end
