@@ -6,29 +6,35 @@ on:
   pull_request:
     branches: [ master, develop ]
 
+env:
+  DB_USER: root
+  DB_PASS: password
+  DB_HOST: 127.0.0.1
+
 jobs:
   rspec:
     name: Run RSpec
     runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: password
+        ports: ['3306:3306']
+  
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.1.4
+      - name: Setup system package
+        uses: ./.github/workflows/build
 
-      - name: apt-get
+      - name: Setup Database
+        env:
+          RAILS_ENV: test
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y nodejs npm
-          sudo apt-get install -y cron
-
-      - name: Install dependencies
-        run: |
-          gem install bundler
-          bundle install --jobs 4 --retry 3
+          bundle exec rails db:create db:migrate
 
       - name: Run RSpec
         run: bundle exec rspec
@@ -48,7 +54,7 @@ jobs:
       - name: Install dependencies
         run: |
           gem install bundler
-          bundle install --jobs 4 --retry 1
+          bundle install --jobs 4 --retry 3
 
       - name: Run RuboCop
         run: bundle exec rubocop

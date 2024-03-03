@@ -1,0 +1,33 @@
+name: Rails build composite
+description: Define system building steps for Rails app
+runs:
+  using: composite
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.1.4
+        bundler-cache: true
+
+    - name: apt-get
+      run: |
+        sudo apt-get update -qq
+        sudo apt-get install -y nodejs
+      shell: bash
+
+    - name: Gem cache
+      uses: actions/cache@v2
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+
+    - name: Bundle install
+      run: |
+        gem install bundler
+        bundle install --jobs 4 --retry 3
+      shell: bash

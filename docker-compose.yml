@@ -17,15 +17,17 @@ services:
       - RAILS_ENV=${RAILS_ENV}
       - TZ=Asia/Tokyo
     env_file: .env
-    volumes:
-      - .:/myapp
+    volumes: 
+      - .:/myapp # synchronize changes between host and container
+      - bundle:/usr/local/bundle # stores gems installed via bundler
+      - node_modules:/myapp/node_modules # includes installed npm packages
     ports:
       - "${RAILS_PORT}:3000"
     depends_on:
       - db
-    stdin_open: true
-    tty: true
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0' -e ${RAILS_ENV}"
 
 volumes:
   mysql_data:
+  bundle:
+  node_modules:
