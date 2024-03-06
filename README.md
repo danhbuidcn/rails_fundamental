@@ -20,6 +20,7 @@ Next, run the test suite to verify that everything is working correctly:
 $ docker exec -it rails_fundamental_web bash
 $ bundle exec rspec
 $ rubocop -a
+$ rails assets:precompile
 ```
 
 ## documentation
