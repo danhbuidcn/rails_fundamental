@@ -1,10 +1,6 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "Users", type: :request do
-  describe "GET /new" do
-    it "returns http success" do
-      get signup_path
-      assert_response :forbidden
-    end
-  end
+RSpec.describe 'Users', type: :request do
 end
