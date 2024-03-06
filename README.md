@@ -7,7 +7,9 @@ For more information, see the [*Ruby on Rails Tutorial* book](https://www.railst
 
 ## Getting started
 
-To get started with the app, clone the repo and then run:
+To get started with the app, clone the repo and then create `.env` from `.env.sample`. 
+
+Next, run:
 ```
 $ doker-composer build
 $ docker-composer up
@@ -19,3 +21,11 @@ $ docker exec -it rails_fundamental_web bash
 $ bundle exec rspec
 $ rubocop -a
 ```
+
+## documentation
+
+[Ruby on Rails 7.0 documentation](https://github.com/danhbuidcn/rails_fundamental/tree/rails_guides)
+
+[See more information](https://devdocs.io/rails~7.0)
+
+[ruby wikipedia](https://vi.wikipedia.org/wiki/Ruby_(ng%C3%B4n_ng%E1%BB%AF_l%E1%BA%ADp_tr%C3%ACnh))
