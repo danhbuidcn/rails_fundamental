@@ -25,6 +25,8 @@ services:
       - "${RAILS_PORT}:3000"
     depends_on:
       - db
+    stdin_open: true # interact with processes inside the container to debug
+    tty: true # allows you to enter commands in container
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0' -e ${RAILS_ENV}"
 
 volumes:
