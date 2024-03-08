@@ -7,4 +7,15 @@ module ApplicationHelper
 
     page_title.empty? ? base_title : "#{page_title} | #{base_title}"
   end
+
+  def flash_key_apply(key)
+    case key
+    when 'notice'
+      'success'
+    when 'alert'
+      'danger'
+    else
+      key
+    end
+  end
 end
