@@ -1,0 +1,6 @@
+.env
+db/
+log/
+mysql_data/
+public/
+tmp/
