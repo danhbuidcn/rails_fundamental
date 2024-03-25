@@ -1,32 +1,32 @@
-# README
+# Ruby on Rails Tutorial sample application
+This is the sample application for Ruby on Rails Tutorial: Learn Web Development with Rails by [Danh Bui](https://github.com/danhbuidcn).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Based on [Ruby on Rails Tutorial](https://www.railstutorial.org/)
 
-Things you may want to cover:
+For more information, see the [*Ruby on Rails Tutorial* book](https://www.railstutorial.org/book).
 
-* Ruby version
+## Getting started
 
-* System dependencies
+To get started with the app, clone the repo and then create `.env` from `.env.sample`. 
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-# Note
-- Ruby version: 3.1.4
-- Rails version: 7.0.8
-- Run
+Next, run:
 ```
-rails credentials:edit
+$ doker-composer build
+$ docker-composer up
 ```
+
+Next, run the test suite to verify that everything is working correctly:
+```
+$ docker exec -it rails_fundamental_web bash
+$ bundle exec rspec
+$ rubocop -a
+$ rails assets:precompile
+```
+
+## documentation
+
+[Ruby on Rails 7.0 documentation](https://github.com/danhbuidcn/rails_fundamental/tree/rails_guides)
+
+[See more information](https://devdocs.io/rails~7.0)
+
+[ruby wikipedia](https://vi.wikipedia.org/wiki/Ruby_(ng%C3%B4n_ng%E1%BB%AF_l%E1%BA%ADp_tr%C3%ACnh))

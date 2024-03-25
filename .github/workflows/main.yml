@@ -1,0 +1,60 @@
+name: "Ruby on Rails CI"
+
+on:
+  push:
+    branches: [ master, develop ]
+  pull_request:
+    branches: [ master, develop ]
+
+env:
+  DB_USER: root
+  DB_PASS: password
+  DB_HOST: 127.0.0.1
+
+jobs:
+  rspec:
+    name: Run RSpec
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: password
+        ports: ['3306:3306']
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup system package
+        uses: ./.github/workflows/build
+
+      - name: Setup Database
+        env:
+          RAILS_ENV: test
+        run: |
+          bundle exec rails db:create db:migrate
+
+      - name: Run RSpec
+        run: bundle exec rspec
+
+  rubocop:
+    name: Run RuboCop
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1.4
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install --jobs 4 --retry 3
+
+      - name: Run RuboCop
+        run: bundle exec rubocop
