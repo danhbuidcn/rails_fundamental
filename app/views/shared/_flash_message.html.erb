@@ -1,6 +1,7 @@
 <div id="flash">
   <% flash.each do |type, messages| %>
     <% next if type == "errors" %>
+
     <% if messages.is_a?(Array) %>
       <div class="alert alert-<%= type %>">
         <% messages.each do |msg| %>

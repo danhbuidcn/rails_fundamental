@@ -17,10 +17,9 @@
         <div class="text-center">
           <%= f.submit "Login", class: "btn btn-info col-lg-12" %>
         </div>
-        <div class="text-right">
-          <%= link_to "Register", new_user_path %>
-        </div>
       <% end %>
+
+      <p>New user? <%= link_to "Sign up now!", signup_path %></p>
     </div>
   </div>
 </div>

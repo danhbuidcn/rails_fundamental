@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  skip_before_action :require_login, only: [:new]
+  skip_before_action :require_login, only: %i[new create]
 
   def index
     @users = User.all
@@ -12,14 +12,14 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new user_params
+    @user = User.new create_params
     if @user.save
       flash[:success] = 'Register success'
       return redirect_to users_path
     end
 
     flash[:danger] = @user.errors.full_messages
-    redirect_to new_user_path
+    redirect_to signup_path
   end
 
   def show
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
 
   private
 
-  def user_params
+  def create_params
     params.require(:user).permit :name, :email, :password, :password_confirmation
   end
 end

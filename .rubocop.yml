@@ -11,6 +11,40 @@ AllCops:
     - mysql_data/*
     - node_modules/*
     - tmp/*
+    - vendor/**/*
+
+Metrics/ClassLength:
+  Max: 135
+
+Metrics/CyclomaticComplexity:
+  Max: 15
+
+Metrics/ModuleLength:
+  Max: 135
+
+Metrics/MethodLength:
+  Max: 30
+
+Metrics/PerceivedComplexity:
+  Max: 15
+
+Layout/LineLength:
+  Max: 130
+
+Metrics/AbcSize:
+  Max: 40
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
 
 Style/Documentation:
+  Enabled: false
+
+Style/GuardClause:
   Enabled: false
