@@ -174,6 +174,24 @@ rails db:seed
 
 [github](https://github.com/corsego/corsego/commit/57b730522f41bd053c65fe6b46c08233f8b13cbf)
 
+[github](https://github.com/corsego/corsego/commit/beb00e6aef326f461d2efb8fedb5037699d1f5f1)
+
 [How To: Add :confirmable to Users](https://github.com/heartcombo/devise/wiki/How-To:-Add-:confirmable-to-Users)
 
 [Action Mailer Basics](https://guides.rubyonrails.org/action_mailer_basics.html)
+
+## sendgrid - send emails in production
+
+SendGrid is a cloud-based email delivery service
+
+[github](https://github.com/corsego/corsego/commit/521e1a592bd191aebdab1bfca5672d0a2629ff3a)
+
+## AWS SES - better way to send emails in production
+
+## add more fields to course
+
+[github](https://github.com/corsego/corsego/commit/ab85755925111afba6ef06382823c639bfa48276)
+
+## gem sansack level 1 - fillter and search data in a table
+
+[github](https://github.com/corsego/corsego/commit/83d539133b819ad759a7da71b3cfc9d2e767dc7e)
