@@ -11,11 +11,40 @@ AllCops:
     - mysql_data/*
     - node_modules/*
     - tmp/*
+    - vendor/**/*
+
+Metrics/ClassLength:
+  Max: 135
+
+Metrics/CyclomaticComplexity:
+  Max: 15
+
+Metrics/ModuleLength:
+  Max: 135
+
+Metrics/MethodLength:
+  Max: 30
+
+Metrics/PerceivedComplexity:
+  Max: 15
+
+Layout/LineLength:
+  Max: 130
+
+Metrics/AbcSize:
+  Max: 40
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
 
 Style/Documentation:
-  Exclude:
-    - app/helpers/application_helper.rb
-    - app/mailers/application_mailer.rb
-    - app/models/application_record.rb
-    - test/application_system_test_case.rb
-    - test/test_helper.rb
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
