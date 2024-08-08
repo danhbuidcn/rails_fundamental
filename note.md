@@ -196,6 +196,37 @@ SendGrid is a cloud-based email delivery service
 
 to build complex search forms and filters for Active Record objects
 
+[tutorial](https://activerecord-hackery.github.io/ransack)
+
 [github](https://github.com/corsego/corsego/commit/83d539133b819ad759a7da71b3cfc9d2e767dc7e)
+
+## gem sansack level 2 - fillter and search course
+
+[github](https://github.com/corsego/corsego/commit/3967698f0930528f48752c68092cc3aa567aaef6)
+
+## level 3 - ransack search in navbar
+
+[github](https://github.com/corsego/corsego/commit/ff48a029d0a0f4f5ad0e001e89fe1362d09952a3)
+
+## gem [public_activity](https://github.com/public-activity/public_activity) track all actions in the app
+
+[github](https://github.com/corsego/corsego/commit/4ec2490e0f6d090c35e5f379d2d514d4c2164a3a)
+
+# 4.Roles and Authorization
+
+## gem [rolify](https://github.com/RolifyCommunity/rolify) - create roles
+
+[github](https://github.com/corsego/corsego/commit/04b2dc35eb45f9b2701b590ae7861da688937987)
+
+
+
+
+
+
+
+
+
+
+
 
 
