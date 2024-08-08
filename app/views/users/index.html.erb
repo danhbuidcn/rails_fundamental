@@ -1,18 +1,20 @@
 <div class="container">
   <div class="row">
-    <div class="col-lg-12 text-center">
+    <div class="col-lg-12 text-center mb-4">
       <h1 class="title">LOGIN APP</h1>
     </div>
-    <div class="col-lg-12 form-group">
-      <label for="">Welcome</label>
-      <%= link_to current_user.name, user_path(current_user) %>
+    <div class="col-lg-12 mb-3">
+      <label for="" class="form-label">Welcome</label>
+      <%= link_to current_user.name, user_path(current_user), class: "link-primary" %>
     </div>
-    <div class="col-lg-12 form-group">
-      <label for="">List Users</label>
-      <table class="table">
+    <div class="col-lg-12">
+      <label for="" class="form-label">List Users</label>
+      <table class="table table-striped">
         <thead>
-          <th>User Name</th>
-          <th>User Email</th>
+          <tr>
+            <th>User Name</th>
+            <th>User Email</th>
+          </tr>
         </thead>
         <tbody>
           <%= render @users %>

@@ -3,13 +3,13 @@
     <% next if type == "errors" %>
 
     <% if messages.is_a?(Array) %>
-      <div class="alert alert-<%= type %>">
+      <div class="alert <%= flash_class(type) %>">
         <% messages.each do |msg| %>
           <div><%= msg %></div>
         <% end %>
       </div>
     <% else %>
-      <div class="alert alert-<%= type %>"><%= messages %></div>
+      <div class="alert <%= flash_class(type) %>"><%= messages %></div>
     <% end %>
   <% end %>
 </div>
