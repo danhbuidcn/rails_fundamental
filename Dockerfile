@@ -11,7 +11,7 @@ RUN apt-get install -y libssl-dev libreadline-dev zlib1g-dev \
     && npm install -g yarn \
     && mkdir /myapp
 
-#used in batch job.
+# Used in batch job. Create and manage cron jobs in the container system
 RUN apt-get install -y cron
 
 WORKDIR /myapp

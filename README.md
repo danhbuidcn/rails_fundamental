@@ -1,31 +1,62 @@
-# Ruby on Rails Tutorial sample application
-This is the sample application for Ruby on Rails Tutorial: Learn Web Development with Rails by [Danh Bui](https://github.com/danhbuidcn).
+# rails_fundamental
 
-Based on [Ruby on Rails Tutorial](https://www.railstutorial.org/)
+Welcome to the `develop` branch of **rails_fundamental**. This branch is designed for practicing and exploring Rails concepts and development practices. 
 
-For more information, see the [*Ruby on Rails Tutorial* book](https://www.railstutorial.org/book).
+## Ruby and Rails Versions
 
-## Getting started
+- **Ruby version**: 3.1.4
+- **Rails version**: 7.0.8
 
-To get started with the app, clone the repo and then create `.env` from `.env.sample`. 
+## Getting Started
 
-Next, run:
-```
-$ doker-composer build
-$ docker-composer up
-```
+### 1. Clone the Repository
 
-Next, run the test suite to verify that everything is working correctly:
-```
-$ docker exec -it rails_fundamental_web bash
-$ bundle exec rspec
-$ rubocop -a
-$ rails assets:precompile
+Clone the repository and check out the `develop` branch:
+
+```bash
+git clone https://github.com/danhbuidcn/rails_fundamental.git
+cd rails_fundamental
+git checkout develop
 ```
 
-## documentation
+### 2. Run the Application
+
+1. **Start Docker Compose**:
+
+    ```bash
+    docker-compose build
+    docker-compose up
+    ```
+
+2. **Execute Commands in the Web Container**:
+
+    ```bash
+    docker-compose exec web bundle exec rails db:create
+    docker exec -it rails_fundamental_web bash
+    ```
+
+    Inside the container, run:
+
+    ```bash
+    bundle install # install gem
+    bundle exec rspec # run test rspec
+    rubocop -a # modify the file to conform to the style guidelines set in your RuboCop configuration 
+    rails assets:precompile # prepare static assets for deployment
+    ```
+
+    Navigate to `http://localhost:3001` in your browser to view the application.
+
+## Contributing
+
+Feel free to contribute by submitting issues or pull requests.
+
+## Documentation
 
 [Ruby on Rails 7.0 documentation](https://github.com/danhbuidcn/rails_fundamental/tree/rails_guides)
+
+[Ruby on Rails Tutorial](https://www.railstutorial.org/)
+
+[*Ruby on Rails Tutorial* book](https://www.railstutorial.org/book).
 
 [See more information](https://devdocs.io/rails~7.0)
 
