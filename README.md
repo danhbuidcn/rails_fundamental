@@ -44,6 +44,11 @@ git checkout develop
     rails assets:precompile # prepare static assets for deployment
     ```
 
+    After installing the package, you might need to rebuild Webpack:
+    ```bash
+    bin/webpack
+    ```
+
     Navigate to `http://localhost:3001` in your browser to view the application.
 
 ## Contributing
@@ -51,6 +56,8 @@ git checkout develop
 Feel free to contribute by submitting issues or pull requests.
 
 ## Documentation
+
+[Entity Relationship Diagram](https://app.diagrams.net/#G1ZBAc6Cn9PqR2HrCbQEBZ2UnrHbAmbeLf#%7B%22pageId%22%3A%222ca16b54-16f6-2749-3443-fa8db7711227%22%7D)
 
 [Ruby on Rails 7.0 documentation](https://github.com/danhbuidcn/rails_fundamental/tree/rails_guides)
 
