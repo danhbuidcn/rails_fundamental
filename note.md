@@ -194,4 +194,8 @@ SendGrid is a cloud-based email delivery service
 
 ## gem sansack level 1 - fillter and search data in a table
 
+to build complex search forms and filters for Active Record objects
+
 [github](https://github.com/corsego/corsego/commit/83d539133b819ad759a7da71b3cfc9d2e767dc7e)
+
+
