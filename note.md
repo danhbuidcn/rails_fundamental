@@ -218,14 +218,97 @@ to build complex search forms and filters for Active Record objects
 
 [github](https://github.com/corsego/corsego/commit/04b2dc35eb45f9b2701b590ae7861da688937987)
 
+## gem rolify - edit roles
 
+[github](https://github.com/corsego/corsego/commit/0a472d59430095f8299d70143f467843fc853b56)
 
+## gem rolify - using role based access
 
+[github](https://github.com/corsego/corsego/commit/c9f8121aa350f5e26f3dd161bcf7ef9ff9e0f733)
 
+## gem [pundit](https://github.com/varvet/pundit) - installation and example usecase
 
+[github](https://github.com/corsego/corsego/commit/3f7311cae30cfa1d5ad081ccca2e66f726118ce0)
 
+## gem pundit - authorization for courses
 
+[github](https://github.com/corsego/corsego/commit/ef1182f294780fe9b64179113a84cc7118f3f789)
 
+## gem pundit - only admin can edit other users
+
+[github](https://github.com/corsego/corsego/commit/98c34cc4b5f00c27e8649bab941673b765877f77)
+
+## gem pundit - user can see links only to allowed actions
+
+[github](https://github.com/corsego/corsego/commit/889baee6267ddd2a8ef3749bae030524fb1f26bf)
+
+# 5.Building the core functionality of the e-learning platform
+
+## gem friendly_id for users, user/show
+
+[github](https://github.com/corsego/corsego/commit/47d485a728554ebbe8bc5841f7a3b3097a1b2351)
+
+## check if current_user is online
+
+[github](https://github.com/corsego/corsego/commit/7813499543de316e86d678b26c4d3fd8a1d26e61)
+
+## add a Lessons table, friendly_id, design it
+
+[github](https://github.com/corsego/corsego/commit/1abce7ad0d6f0872a849d4f168256aa429bcaf77)
+
+## [public_activity for Lessons](https://github.com/corsego/corsego/commit/9ef0ce68da9ed827645d58b53e8697e970080254) - [create Lessons inside Courses](https://github.com/corsego/corsego/commit/81c006ee2cf663d6cbce17fe9cc9d2c80133a2fc)
+
+## gem pundit - authorization for Lessons
+
+[github](https://github.com/corsego/corsego/commit/3a13ac995b4f9d7ec9acda9b7cf055cf4bd9b3a7)
+
+## nested resources. lessons in courses
+
+[github](https://github.com/corsego/corsego/commit/ef4399a76589e7d13ad046490b7f79135e6632ac)
+
+## gem pundit - authorization for Lessons create action
+
+[github](https://github.com/corsego/corsego/commit/5a3e49dd6d454cbc018f1844663fea4d98de41cb)
+
+## minor styling for edit and new views
+
+[github](https://github.com/corsego/corsego/commit/6a6f2065cd5387dc965cb2d0289916876bc5f527)
+
+## gem exception_notification for error emails in production
+
+[github](https://github.com/corsego/corsego/commit/9d0ecd3c4af3afa0fc839decddd9490c9fb53714)
+
+## design for courses and lessons
+
+[github](https://github.com/corsego/corsego/commit/d7ece9f22b6a6a03a2cad33b9bce54e010b63b58)
+
+## gem pagy for pagination
+
+[github](https://github.com/corsego/corsego/commit/83d9577978e03c715c2791aeda2d53c616a7daf8)
+
+## add dynamic title to page tabs
+
+[github](https://github.com/corsego/corsego/commit/517a66907f2f71d3789840a4d381b12eb054e781)
+
+## scaffold Enrollments. Basic validation and design
+
+[github](https://github.com/corsego/corsego/commit/4b502b90ec272bbaf2d140143d096fac3e502eed)
+
+## Button for user to Enroll to a Course
+
+[github](https://github.com/corsego/corsego/commit/77c68687bf6eb5033ee34e302d8d111f1b8faf83)
+
+## gem pundit for Enrollments
+
+[github](https://github.com/corsego/corsego/commit/ac12371f0c0816a9d836244945da748c8bffb34d)
+
+## gem pundit - user can access his purchased Courses
+
+[github](https://github.com/corsego/corsego/commit/c17163857da7e5923c340d8d6e22ac3f39d7290f)
+
+## work on Enrollment views
+
+[github](https://github.com/corsego/corsego/commit/3066bb184a1d7437e17a22ae1d8d5e3b0d6c8d42)
 
 
 
