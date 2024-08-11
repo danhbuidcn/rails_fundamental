@@ -78,9 +78,6 @@ GEM
     bootstrap (5.3.3)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 2.11.8, < 3)
-    bootstrap-sass (3.4.1)
-      autoprefixer-rails (>= 5.2.1)
-      sassc (>= 2.0.0)
     builder (3.2.4)
     capybara (3.39.2)
       addressable
@@ -269,9 +266,6 @@ GEM
     semantic_range (3.0.0)
     shoulda-matchers (6.1.0)
       activesupport (>= 5.2.0)
-    simple_form (5.3.1)
-      actionpack (>= 5.2)
-      activemodel (>= 5.2)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -317,7 +311,6 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap
   bootstrap (~> 5.3.3)
-  bootstrap-sass (~> 3.2)
   capybara
   debug
   factory_bot_rails
@@ -335,7 +328,6 @@ DEPENDENCIES
   sassc-rails
   selenium-webdriver
   shoulda-matchers (~> 6.0)
-  simple_form
   sprockets-rails
   stimulus-rails
   turbo-rails

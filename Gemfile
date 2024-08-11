@@ -48,9 +48,7 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 
 gem 'bootstrap', '~> 5.3.3'
-gem 'bootstrap-sass', '~> 3.2'
 gem 'sassc-rails'
-gem 'simple_form'
 gem 'webpacker'
 
 group :development, :test do

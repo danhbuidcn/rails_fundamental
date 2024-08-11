@@ -20,6 +20,11 @@ git checkout develop
 ```
 
 ### 2. Run the Application
+1. **Create .env file**
+
+    ```bash
+    cp .env.sample .env
+    ```
 
 1. **Start Docker Compose**:
 
