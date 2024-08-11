@@ -1,3 +1,5 @@
+https://corsego.com/
+
 # 2 Configure application
 ## Install bootstrap with yarn and webpacker
 
