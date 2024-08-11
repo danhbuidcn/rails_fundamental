@@ -26,14 +26,14 @@ git checkout develop
     cp .env.sample .env
     ```
 
-1. **Start Docker Compose**:
+2. **Start Docker Compose**:
 
     ```bash
     docker-compose build
     docker-compose up
     ```
 
-2. **Execute Commands in the Web Container**:
+3. **Execute Commands in the Web Container**:
 
     ```bash
     docker-compose exec web bundle exec rails db:create

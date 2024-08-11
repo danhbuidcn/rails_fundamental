@@ -13,6 +13,10 @@ AllCops:
     - tmp/*
     - vendor/**/*
 
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+
 Metrics/ClassLength:
   Max: 135
 
