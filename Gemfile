@@ -79,3 +79,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'shoulda-matchers', '~> 6.0'
 end
+
+# Faker: Generates fake data for testing and development.
+gem 'faker'

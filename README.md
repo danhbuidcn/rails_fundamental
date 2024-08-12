@@ -51,6 +51,10 @@ git checkout develop
 
     Navigate to `http://localhost:3001` in your browser to view the application.
 
+## Seeding the Database
+
+Use `rails db:seed` to populate the database with sample data from the `db/seeds.rb` file.
+
 ## Contributing
 
 Feel free to contribute by submitting issues or pull requests.

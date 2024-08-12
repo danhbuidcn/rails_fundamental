@@ -1,0 +1,18 @@
+<h1>Blog Posts</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @blog_posts.each do |blog_post| %>
+      <tr>
+        <td><%= blog_post.title %></td>
+        <td><%= truncate(blog_post.body, length: 100) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
