@@ -12,5 +12,9 @@ AllCops:
     - node_modules/*
     - tmp/*
 
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+
 Style/Documentation:
   Enabled: false
