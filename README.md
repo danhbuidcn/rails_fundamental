@@ -49,9 +49,11 @@ git checkout develop
     rails assets:precompile # prepare static assets for deployment
     ```
 
-    After installing the package, you might need to rebuild Webpack:
+    After installing the package
     ```bash
-    bin/webpack
+    yarn add sass@1.77.6 --exact
+    rails css:install:bootstrap
+    yarn build:css
     ```
 
     Navigate to `http://localhost:3001` in your browser to view the application.
