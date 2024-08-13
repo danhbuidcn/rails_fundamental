@@ -5,6 +5,7 @@
     <tr>
       <th>Title</th>
       <th>Body</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -12,6 +13,7 @@
       <tr>
         <td><%= blog_post.title %></td>
         <td><%= truncate(blog_post.body, length: 100) %></td>
+        <td><%= link_to 'View', blog_post_path(blog_post), class: 'btn btn-primary' %></td>
       </tr>
     <% end %>
   </tbody>
