@@ -40,6 +40,12 @@ git checkout develop
     docker exec -it rails_fundamental_web bash
     ```
 
+    Install tailwindcss
+    ```
+    bundle exec rails tailwindcss:install
+    bundle exec rails tailwindcss:build
+    ```
+
     Inside the container, run:
 
     ```bash
@@ -47,6 +53,7 @@ git checkout develop
     bundle exec rspec # run test rspec
     rubocop -a # modify the file to conform to the style guidelines set in your RuboCop configuration 
     rails assets:precompile # prepare static assets for deployment
+    bundle exec rails c # to run rails console
     ```
 
     Navigate to `http://localhost:3001` in your browser to view the application.

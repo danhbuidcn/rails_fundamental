@@ -1,29 +1,44 @@
 FROM ruby:3.1.4
-RUN apt-get update
 
-# Install Node.js
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
-RUN apt-get install -y nodejs npm
+# Install Node.js and Yarn
+RUN apt-get update -qq \
+    && apt-get install -y \
+       nodejs \
+       yarn \
+       build-essential \
+       libpq-dev \
+       cron
 
-RUN apt-get install -y libssl-dev libreadline-dev zlib1g-dev \
-    autoconf bison build-essential libyaml-dev \
-    libncurses5-dev libffi-dev libgdbm-dev \
-    && npm install -g yarn \
-    && mkdir /myapp
+# Install necessary libraries
+RUN apt-get install -y \
+       libssl-dev \
+       libreadline-dev \
+       zlib1g-dev \
+       autoconf \
+       bison \
+       build-essential \
+       libyaml-dev \
+       libncurses5-dev \
+       libffi-dev \
+       libgdbm-dev
 
-# Used in batch job. Create and manage cron jobs in the container system
-RUN apt-get install -y cron
-
+# Create application directory
+RUN mkdir /myapp
 WORKDIR /myapp
+
+# Copy Gemfile and Gemfile.lock and install gems
 COPY Gemfile /myapp/Gemfile
 COPY Gemfile.lock /myapp/Gemfile.lock
-COPY . /myapp
-RUN yarn install
 RUN bundle install
 
+# Copy application code into the container
+COPY . /myapp
+
+# Copy and set permissions for the entrypoint file
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
 
+# Set entrypoint and startup commands
 ENTRYPOINT ["entrypoint.sh"]
 EXPOSE 3000
-CMD ["rails", "server", "-b", "0.0.0.0", "-e", "${RAILS_ENV}"]
+CMD ["rails", "server", "-b", "0.0.0.0"]
