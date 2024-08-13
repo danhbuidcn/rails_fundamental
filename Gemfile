@@ -82,3 +82,6 @@ end
 
 # Faker: Generates fake data for testing and development.
 gem 'faker'
+
+# a flexible authentication solution for Rails based on Warden
+gem 'devise', '~> 4.9'

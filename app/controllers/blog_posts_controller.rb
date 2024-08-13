@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class BlogPostsController < ApplicationController
-  before_action :blog_post, only: %i[show edit update destroy]
+  before_action :blog_post, except: %i[index new create]
 
   def index
     @blog_posts = BlogPost.all

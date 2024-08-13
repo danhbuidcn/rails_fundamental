@@ -15,3 +15,9 @@ require 'faker'
     body: Faker::Lorem.paragraphs(number: 5).join("\n")
   )
 end
+
+User.find_or_initialize(
+  email: 'admin@gmail.com',
+  password: 'password',
+  password_confirmation: 'password'
+)

@@ -72,4 +72,6 @@ Rails.application.configure do
 
   config.hosts << ENV["RAILS_HOST"]
   config.action_controller.forgery_protection_origin_check = false
+
+  config.action_mailer.default_url_options = {host: ENV["RAILS_HOST"], port: ENV["RAILS_PORT"]}
 end
