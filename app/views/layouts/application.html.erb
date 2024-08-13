@@ -2,21 +2,15 @@
 <html>
   <head>
     <title>RailsFundamental</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <% if controller_name == "blog_posts" %>
-      <%= stylesheet_link_tag "blog_posts", media: "all", "data-turbo-track": "reload" %>
-    <% end %>
-    <%= javascript_importmap_tags %>
+    <%= render "layouts/shim" %>
   </head>
 
-  <body>
-    <div class="container-fluid">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    </div>
+  <body class="prose mx-auto">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <%= render "layouts/header" %>
     <%= yield %>
+    <%= render "layouts/footer" %>
   </body>
 </html>

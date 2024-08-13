@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class BlogPostsController < ApplicationController
+  before_action :authenticate_user!, except: %i[index show]
   before_action :blog_post, except: %i[index new create]
 
   def index
