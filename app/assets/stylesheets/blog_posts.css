@@ -1,0 +1,127 @@
+/* General styles for the blog posts index page */
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* Style for the New Blog Post button */
+.btn-primary {
+  margin-bottom: 20px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Table styles */
+.table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.table thead {
+  background-color: #f8f9fa;
+}
+
+.table th, .table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.table th {
+  font-weight: bold;
+}
+
+.table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Button styles */
+.btn {
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.875rem;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+}
+
+.btn-info:hover {
+  background-color: #138496;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.btn-sm {
+  font-size: 0.875rem;
+  padding: 3px 6px;
+}
+
+/* Form container styling */
+.form-container {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Label styling */
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Input fields styling */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styling */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+/* Adding space between buttons */
+.btn + .btn {
+  margin-left: 10px;
+}
