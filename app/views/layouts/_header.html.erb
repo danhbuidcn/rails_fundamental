@@ -8,7 +8,7 @@
       <%= link_to "Blog", blog_posts_path, class: "navbar-item" %>
       <% if user_signed_in? %>
         <%= link_to "Profile", edit_user_registration_path, class: "navbar-item" %>
-        <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "navbar-item button logout-button" %>
+        <%= link_to "Log out", destroy_user_session_path, data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?", turbo_method: :delete }, class: "navbar-item" %>
       <% else %>
         <%= link_to "Login", new_user_session_path, class: "navbar-item" %>
         <%= link_to "Sign Up", new_user_registration_path, class: "navbar-item" %>
