@@ -1,0 +1,51 @@
+/* General styles for the blog posts index page */
+.blog_posts {
+  width: 100%;
+  margin: 0 auto;   /* Căn giữa toàn bộ blog post */
+  padding: 20px;    /* Thêm khoảng cách xung quanh */
+  border-radius: 8px; /* Bo góc nhẹ */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+
+  div {
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .btn-primary {
+    margin-bottom: 20px;
+  }
+  
+  .text-right {
+    text-align: right;
+    padding: 0 0 20px 20px;
+  }
+
+  .table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+
+    thead {
+      background-color: #f8f9fa;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    th {
+      font-weight: bold;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+  }
+}

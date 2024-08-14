@@ -20,6 +20,7 @@ module RailsFundamental
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.autoload_paths += %W(#{config.root}/lib)
 
     # config.time_zone sets the default time zone for the application.
     config.time_zone = 'Asia/Ho_Chi_Minh'

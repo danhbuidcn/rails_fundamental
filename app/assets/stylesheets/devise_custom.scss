@@ -1,0 +1,116 @@
+/* Custom SCSS for Devise views */
+
+/* Styles for the Devise sign-up form */
+.devise-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  background-color: #f8f9fa;
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #343a40;
+  }
+
+  form {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+
+    label {
+      font-weight: bold;
+      color: #495057;
+    }
+
+    &.remember-me {
+      display: flex;
+      align-items: center;
+    }
+
+    .remember-me-checkbox {
+      margin-right: 5px;
+      width: 16px;
+      height: 16px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-color: #ffffff;
+      border: 1px solid #ced4da;
+      border-radius: 3px;
+      outline: none;
+      cursor: pointer;
+
+      &:checked {
+        background-color: #007bff;
+        border: none; /* Loại bỏ border khi checkbox được chọn */
+        color: #ffffff;
+
+        &::before {
+          display: block;
+          text-align: center;
+          color: #ffffff;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .remember-me-label {
+      margin: 0;
+      font-weight: normal;
+      color: #495057;
+    }
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    outline: none;
+  }
+
+  .form-control:focus {
+    border-color: #999; // Thay đổi màu border khi focus nếu cần
+    box-shadow: none; // Xóa shadow nếu có
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+
+  .links {
+    margin-top: 20px;
+    text-align: center;
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
