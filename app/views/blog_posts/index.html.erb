@@ -1,28 +1,28 @@
-<h1>Blog Posts</h1>
+<div class="blog_posts">
+  <p class="text-right">
+    <%= link_to "New Blog Post", new_blog_post_path, class: "btn btn-primary" %>
+  </p>
 
-<p class="text-right">
-  <%= link_to "New Blog Post", new_blog_post_path, class: "btn btn-primary" %>
-</p>
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="3">Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @blog_posts.each do |blog_post| %>
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= blog_post.title %></td>
-        <td><%= truncate(blog_post.body, length: 100) %></td>
-        <td><%= link_to "Show", blog_post, class: "btn btn-info" %></td>
-        <td><%= link_to "Edit", edit_blog_post_path(blog_post), class: "btn btn-warning" %></td>
-        <td>
-          <%= button_to "Delete", blog_post, method: :delete, data: { turbo_confirm: "Are you sure?" }, class: "btn btn-danger btn-sm" %>
-        </td>
+        <th>Title</th>
+        <th>Body</th>
+        <th colspan="3">Actions</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @blog_posts.each do |blog_post| %>
+        <tr>
+          <td><%= blog_post.title %></td>
+          <td><%= truncate(blog_post.body, length: 100) %></td>
+          <td><%= link_to "Show", blog_post, class: "btn btn-info" %></td>
+          <td><%= link_to "Edit", edit_blog_post_path(blog_post), class: "btn btn-warning" %></td>
+          <td>
+            <%= button_to "Delete", blog_post, method: :delete, data: { turbo_confirm: "Are you sure?" }, class: "btn btn-danger btn-sm" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<div>
