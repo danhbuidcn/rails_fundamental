@@ -21,6 +21,7 @@ services:
       - .:/myapp # synchronize changes between host and container
       - bundle:/usr/local/bundle # stores gems installed via bundler
       - node_modules:/myapp/node_modules # includes installed npm packages
+      - ./app/assets:/myapp/app/assets # mount assets directory
     ports:
       - "${RAILS_PORT}:3000"
     depends_on:
